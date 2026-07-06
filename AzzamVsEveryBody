@@ -98,17 +98,17 @@ local DEFAULT_CONFIG = {
 	AutoRejoin = true,
 	RejoinSeed = "Auto",
 	RejoinCheckInterval = 10,
-	RejoinDelay = 5,
+	RejoinDelay = 25,
 	WaitForInventoryBeforeRejoin = true,
 	InventoryEmptyConfirmDelay = 10,
-	Speed = 0.2,
+	Speed = 0.1,
 
 	Sprinklers = {
 		["Super Sprinkler"] = true,
 		["Common Sprinkler"] = false,
 		["Uncommon Sprinkler"] = false,
 		["Rare Sprinkler"] = false,
-		["Legendary Sprinkler"] = false,
+		["Legendary Sprinkler"] = true,
 	},
 
 	-- Bisa juga pakai top-level begini kalau mau simpel:
