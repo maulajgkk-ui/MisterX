@@ -2966,12 +2966,14 @@ end
 task.spawn(function()
     local vim = game:GetService("VirtualInputManager")
     
+    task.wait(8) -- tunggu UI muncul dulu
+    
     while true do
-        task.wait(0.1)
+        task.wait(0.15)
         
         pcall(function()
-            vim:SendTouchEvent(0, Enum.UserInputState.Begin.Value, 600, 400)
-            vim:SendTouchEvent(0, Enum.UserInputState.End.Value, 600, 400)
+            vim:SendMouseButtonEvent(600, 400, 0, true, game, 1)
+            vim:SendMouseButtonEvent(600, 400, 0, false, game, 1)
         end)
     end
 end)
