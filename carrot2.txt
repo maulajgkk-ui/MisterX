@@ -82,9 +82,9 @@ local DEFAULT_CONFIG = {
 	AutoRejoin = true,
 	RejoinSeed = "Auto",
 	RejoinCheckInterval = 5,
-	RejoinDelay = 25,
+	RejoinDelay = 15,
 	WaitForInventoryBeforeRejoin = true,
-	InventoryEmptyConfirmDelay = 7,
+	InventoryEmptyConfirmDelay = 5,
 	Speed = 0.1,
 
 	Sprinklers = {
