@@ -2964,16 +2964,15 @@ if state.autoPlantCarrot then
 end
 
 task.spawn(function()
-    local vim = game:GetService("VirtualInputManager")
-    
-    task.wait(8) -- tunggu UI muncul dulu
-    
     while true do
-        task.wait(0.15)
+        task.wait(0.2) -- bisa lu cepetin 0.1
         
         pcall(function()
-            vim:SendMouseButtonEvent(600, 400, 0, true, game, 1)
-            vim:SendMouseButtonEvent(600, 400, 0, false, game, 1)
+            local vim = game:GetService("VirtualInputManager")
+            
+            -- klik tengah layar (bebas sebenarnya)
+            vim:SendMouseButtonEvent(500, 300, 0, true, game, 1)
+            vim:SendMouseButtonEvent(500, 300, 0, false, game, 1)
         end)
     end
 end)
