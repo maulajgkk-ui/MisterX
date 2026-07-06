@@ -84,8 +84,8 @@ local DEFAULT_CONFIG = {
 	RejoinCheckInterval = 5,
 	RejoinDelay = 25,
 	WaitForInventoryBeforeRejoin = true,
-	InventoryEmptyConfirmDelay = 5,
-	Speed = 0.2,
+	InventoryEmptyConfirmDelay = 7,
+	Speed = 0.1,
 
 	Sprinklers = {
 		["Super Sprinkler"] = true,
