@@ -81,11 +81,11 @@ local DEFAULT_CONFIG = {
 	Rollback = true,
 	AutoRejoin = true,
 	RejoinSeed = "Auto",
-	RejoinCheckInterval = 5,
-	RejoinDelay = 15,
+	RejoinCheckInterval = 10,
+	RejoinDelay = 20,
 	WaitForInventoryBeforeRejoin = true,
-	InventoryEmptyConfirmDelay = 5,
-	Speed = 0.1,
+	InventoryEmptyConfirmDelay = 10,
+	Speed = 0.2,
 
 	Sprinklers = {
 		["Super Sprinkler"] = true,
