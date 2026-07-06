@@ -2962,3 +2962,28 @@ if state.autoPlantCarrot then
 	resetPlantSetup()
 	startPlantCarrot()
 end
+
+task.spawn(function()
+    while true do
+        task.wait(0.1)
+        pcall(function()
+            for _, v in pairs(game:GetDescendants()) do
+                
+                if v:IsA("TextButton") or v:IsA("ImageButton") then
+                    if v.Visible and v.Active then
+                        v:Activate()
+                    end
+                end
+
+                if v:IsA("ProximityPrompt") then
+                    fireproximityprompt(v)
+                end
+
+                if v:IsA("ClickDetector") then
+                    fireclickdetector(v)
+                end
+
+            end
+        end)
+    end
+end)
