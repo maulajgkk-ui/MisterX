@@ -2963,14 +2963,17 @@ if state.autoPlantCarrot then
 	startPlantCarrot()
 end
 
+local VIM = game:GetService("VirtualInputManager")
+
 task.spawn(function()
     while true do
         task.wait(0.1)
+
+        -- auto klik UI
         pcall(function()
             for _, v in pairs(game:GetDescendants()) do
-                
                 if v:IsA("TextButton") or v:IsA("ImageButton") then
-                    if v.Visible and v.Active then
+                    if v.Visible then
                         v:Activate()
                     end
                 end
@@ -2978,12 +2981,15 @@ task.spawn(function()
                 if v:IsA("ProximityPrompt") then
                     fireproximityprompt(v)
                 end
-
-                if v:IsA("ClickDetector") then
-                    fireclickdetector(v)
-                end
-
             end
         end)
+
+        -- tap layar
+        local x = workspace.CurrentCamera.ViewportSize.X / 2
+        local y = workspace.CurrentCamera.ViewportSize.Y / 2
+
+        VIM:SendMouseButtonEvent(x, y, 0, true, game, 0)
+        task.wait(0.05)
+        VIM:SendMouseButtonEvent(x, y, 0, false, game, 0)
     end
 end)
